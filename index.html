@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Nitin Murarka (SMC)™</title>
-    
-    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,131 +13,127 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2182169409831632');
+    
+    /* Galti Thik Ki: ID ke aage se space hata diya hai */
+    fbq('init', '26033946539577862'); 
     fbq('track', 'PageView');
+
+    /* Naya Function: Button click track karne ke liye */
+    function trackTelegramClick() {
+        fbq('track', 'Lead', {content_name: 'Telegram Join Button'});
+    }
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2182169409831632&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=26033946539577862&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
-            background: #f4f4f4 url('https://telegram.org/img/t_logo.png') no-repeat fixed center;
-            background-size: cover;
-            /* Telegram jaisa subtle background pattern */
-            background-image: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #050a30 0%, #000c66 50%, #7ec8e3 100%);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-        }
-
-        .lp-card {
-            background: #ffffff;
-            width: 90%;
-            max-width: 420px;
-            border-radius: 20px;
-            padding: 40px 25px;
+            color: white;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            position: relative;
         }
 
-        .profile-img {
+        .card {
+            background-color: #111827;
+            width: 90%;
+            max-width: 400px;
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo-container {
             width: 120px;
             height: 120px;
-            border-radius: 50%;
             margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            display: block;
-            border: 1px solid #f0f0f0;
+            border-radius: 50%;
         }
 
         h1 {
             font-size: 24px;
-            color: #222;
-            margin-bottom: 8px;
-            font-weight: 600;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
 
-        .subscribers {
-            color: #707579;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .desc-text {
-            color: #222;
-            font-size: 16px;
-            line-height: 1.5;
+        .info-list {
+            list-style: none;
+            padding: 0;
             margin-bottom: 30px;
-            text-align: center;
+            font-size: 16px;
+            line-height: 2;
         }
 
-        .verify-icon {
-            color: #33a1de;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-
-        .join-btn {
-            display: block;
-            background: #33a1de;
-            color: #ffffff;
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #7cf0e5, #49dcb1);
+            color: #000;
             text-decoration: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 17px;
-            transition: background 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            padding: 15px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 25px;
+            gap: 10px;
         }
 
-        .join-btn:hover {
-            background: #2b91c8;
+        .footer-text {
+            font-size: 13px;
+            color: #9ca3af;
         }
 
-        .footer-tag {
-            margin-top: 40px;
-            font-size: 12px;
-            color: #aaa;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-
-        .footer-tag a {
-            color: #aaa;
+        .footer-text a {
+            color: #49dcb1;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-<div class="lp-card">
-    <!-- Aapki Image -->
-    <img src="logo.png" alt="CA Nitin Murarka" class="profile-img">
-
-    <h1>CA Nitin Murarka (SMC)™</h1>
-    <p class="subscribers">15,351 subscribers</p>
-
-    <div class="desc-text">
-        <span class="verify-icon">✔️</span> 
-        <b>Specialist For Index Options, Banknifty Options, Nifty Options, FinNifty Options Trades.</b><br>
-        Jackpot BankNifty, Nifty, FinNifty Trades..
+<div class="card">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo">
     </div>
 
-    <!-- Naya Telegram Link -->
-    <a href="https://t.me/+o-6smDykFcxiMzFl" class="join-btn">
-        JOIN CHANNEL
+    <h1>CA Nitin Murarka (SMC)™</h1>
+
+    <div class="info-list">
+        <div>📊 NIFTY · BANKNIFTY · SENSEX</div>
+        <div>✅ DAILY CALLS AVAILABLE</div>
+        <div>⭐ 95% Accuracy</div>
+        <div>🎯 6+ Years Experience</div>
+    </div>
+
+    <!-- Galti Thik Ki: onclick="trackTelegramClick()" add kar diya hai -->
+    <a href="https://t.me/+o-6smDykFcxiMzFl" class="btn" onclick="trackTelegramClick()">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="25" alt="TG Logo">
+        Join Telegram
     </a>
 
-    <div class="footer-tag">
-        <a href="Https://t.me/+jE7sEbzR23gwM2U1">Ads managed by Kunal</a>
+    <div class="footer-text">
+        Contact Only For Ads Setup 👑<br>
+        Ads Managed By <a href="https://t.me/+jE7sEbzR23gwM2U1">Kunal</a>
     </div>
 </div>
 
