@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CA Nitin Murarka (SMC)™</title>
+    <title>CA Nitin Murarka™</title>
+    
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,129 +15,217 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    
-    /* Galti Thik Ki: ID ke aage se space hata diya hai */
-    fbq('init', '2267092827452111'); 
+    fbq('init', '1290835829493208');
     fbq('track', 'PageView');
-
-    /* Naya Function: Button click track karne ke liye */
-    function trackTelegramClick() {
-        fbq('track', 'Lead', {content_name: 'Telegram Join Button'});
-    }
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2267092827452111&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1290835829493208&ev=PageView&noscript=1"
     /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(180deg, #050a30 0%, #000c66 50%, #7ec8e3 100%);
-            height: 100vh;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #090d16;
+            background-image: radial-gradient(circle at 50% 20%, #111a2e 0%, #090d16 85%);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #ffffff;
         }
 
         .card {
-            background-color: #111827;
-            width: 90%;
-            max-width: 400px;
-            padding: 40px 20px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: linear-gradient(145deg, #131c31 0%, #0a101d 100%);
+            border: 1px solid rgba(0, 178, 255, 0.25);
+            border-radius: 28px;
+            padding: 35px 25px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 178, 255, 0.12);
+            backdrop-filter: blur(10px);
         }
 
-        .logo-container {
+        .avatar-container {
             width: 120px;
             height: 120px;
-            margin: 0 auto 20px;
+            margin: 0 auto 20px auto;
             border-radius: 50%;
-            background: #fff;
-            padding: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border: 3px solid #00b2ff;
+            box-shadow: 0 0 25px rgba(0, 178, 255, 0.4);
             overflow: hidden;
+            background-color: #162238;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .logo-container img {
+        .avatar-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%;
         }
 
-        h1 {
-            font-size: 24px;
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .subscribers {
+            color: #9ca3af;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-list {
+            font-size: 14px;
+            color: #e5e7eb;
+            line-height: 1.6;
             margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .subtitle-list p {
+            margin-bottom: 8px;
+        }
+
+        .highlight-text {
+            color: #10b981;
             font-weight: 700;
         }
 
-        .info-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            font-size: 16px;
-            line-height: 2;
-        }
-
-        .btn {
+        /* Animated Glowing & Blinking Join Button */
+        .btn-join {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(90deg, #7cf0e5, #49dcb1);
-            color: #000;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 40px;
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 25px;
             gap: 10px;
-        }
-
-        .footer-text {
-            font-size: 13px;
-            color: #9ca3af;
-        }
-
-        .footer-text a {
-            color: #49dcb1;
+            background: linear-gradient(90deg, #0088cc 0%, #00b2ff 100%);
+            color: #ffffff;
             text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 24px;
+            border-radius: 30px;
+            box-shadow: 0 0 25px rgba(0, 178, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: pulse-glow 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 35px rgba(0, 178, 255, 0.95);
+                opacity: 0.92;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+                opacity: 1;
+            }
+        }
+
+        .telegram-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #ffffff;
+            color: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .timer-text {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 12px;
+            line-height: 1.8;
+            max-width: 380px;
+        }
+
+        .footer a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <div class="logo-container">
-        <img src="logo.png" alt="Logo">
+    <div class="card">
+        <div class="avatar-container">
+            <img src="logo.png" alt="CA Nitin Murarka™">
+        </div>
+
+        <h1 class="title">CA Nitin Murarka™</h1>
+        <div class="subscribers">23,668 subscribers</div>
+
+        <div class="subtitle-list">
+            <p class="highlight-text">99% Accuracy ✅</p>
+            <p>💪🔥 India's best No.1 Stock Market Channel 🔥💪</p>
+            <p>📈 For #Nifty #Banknifty and #stocks calls 🚀</p>
+            <p>Disclaimer:- WE ARE SEBI REGISTERED ✅</p>
+            <p>💪🔥 Daily Earn 20k-50k 🔥💪</p>
+        </div>
+
+        <a href="https://t.me/+gTrXqpEJQrIxZmM9" class="btn-join" onclick="fbq('track','Lead')">
+            <span class="telegram-icon">➤</span>
+            Request to Join Channel
+            <span class="telegram-icon">➤</span>
+        </a>
+
+        <div class="timer-text">Redirecting in <span id="countdown">28</span> seconds...</div>
     </div>
 
-    <h1>CA Nitin Murarka (SMC)™</h1>
-
-    <div class="info-list">
-        <div>📊 NIFTY · BANKNIFTY · SENSEX</div>
-        <div>✅ DAILY CALLS AVAILABLE</div>
-        <div>⭐ 95% Accuracy</div>
-        <div>🎯 6+ Years Experience</div>
+    <div class="footer">
+        <p>This channel is for educational and informational purposes only.</p>
+        <p>ads Managed by <a href="https://t.me/+jE7sEbzR23gwM2U1" target="_blank">Kunal</a></p>
     </div>
 
-    <!-- Galti Thik Ki: onclick="trackTelegramClick()" add kar diya hai -->
-    <a href="https://t.me/+o-6smDykFcxiMzFl" class="btn" onclick="trackTelegramClick()">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="25" alt="TG Logo">
-        Join Telegram
-    </a>
-
-    <div class="footer-text">
-        Contact Only For Ads Setup 👑<br>
-        Ads Managed By <a href="https://t.me/+jE7sEbzR23gwM2U1">Kunal</a>
-    </div>
-</div>
+    <script>
+        let seconds = 28;
+        const countdownEl = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            seconds--;
+            if (countdownEl) countdownEl.innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
